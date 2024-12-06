@@ -159,6 +159,19 @@ ros2 run py_pubsub listener
 # Performing SLAM using TurtleBot3
 Follow the SLAM proccess on the [ROBOTIS e-Manual](https://emanual.robotis.com/docs/en/platform/turtlebot3/slam/) Humble. Specifically, follow the steps below.
 
+Open a new terminal and bring up the robot.
+```
+ros2 launch turtlebot3_bringup robot.launch.py
+```
+Open a new terminal and start the cartographer.
+```
+ros2 launch turtlebot3_cartographer cartographer.launch.py
+```
+Open a new terminal and run the following command so the robot can move.
+```
+ros2 run turtlebot3_teleop teleop_keyboard
+```
+
 
 # Vision Language Model (VLM) Setup
 ## Download Jetson Containers & Associated Models
