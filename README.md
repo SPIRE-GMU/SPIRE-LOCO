@@ -4,7 +4,7 @@ Project Description
 
 # Hardware/Software Requirements
 * 2-3 TurtleBot3 Burger Robots (Raspberry Pi 3 Model B+ running Ubuntu 22.04 Server with ROS2 Humble Hawksbill)
-* TurtleBot3 Burger Robot (Jetson Development Kit running Ubuntu 22.04 with ROS 2 Humble Hawksbill)
+* TurtleBot3 Burger Robot (Jetson Development Kit running Ubuntu 22.04 (Jetpack 6.1) with ROS 2 Humble Hawksbill)
 * C270 HD Webcam
 * Router
 
@@ -138,3 +138,49 @@ ros2 launch turtlebot3_bringup robot.launch.py
 ```
 _*** Should say Run! if successfully brought up ***_
 Open a new terminal and run the following commands to be able 
+
+# Vision Language Model (VLM) Setup
+## Download Jetson Containers & Associated Models
+```
+git clone https://github.com/dusty-nv/jetson-containers
+bash jetson-containers/install.sh
+```
+Download and Run the Live LLava Model from Liuhaotian
+```
+jetson-containers run liuhaotian/llava-v1.5-7b
+```
+
+## Configuring Docker Daemon 
+The purpose is to store the VLM models inside the SD card.
+*  https://blog.adriel.co.nz/2018/01/25/change-docker-data-directory-in-debian-jessie/
+* https://docs.docker.com/engine/daemon/
+
+Within the daemon.json config file
+```
+{
+    "runtimes": {
+        "nvidia": {
+            "args": [],
+            "path": "nvidia-container-runtime"
+        }
+    },
+    "data-root": "/media/ubu/sd_card/docker"
+}
+```
+
+```
+sudo systemctl restart docker 
+```
+## Run the vlm_ws as a ROS2 Node
+Navigate inside the vlm_ws directory to colcon build and source setup files.
+```
+colcon build --packages-select live_llava
+source install/setup.bash
+```
+
+Execute the VLM node first, followed by the Publisher and Subscriber nodes, each in their separate terminal.
+```
+ros2 run live_llava vlm_start
+ros2 run live_llava vlm_pub
+ros2 run live_llava vlm_sub
+```
