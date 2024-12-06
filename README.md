@@ -6,10 +6,12 @@ Project Description
 * 2-3 TurtleBot3 Burger Robots (Raspberry Pi 3 Model B+ running Ubuntu 22.04 Server with ROS2 Humble Hawksbill)
 * TurtleBot3 Burger Robot (Jetson Development Kit running Ubuntu 22.04 with ROS 2 Humble Hawksbill)
 * C270 HD Webcam
+* Router
 
 # Robot Operating System Set Up
-Follow the Installation process on the [ROS 2 Documentation: Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html) website and the Quick Start Guide on the [ROBOTIS e-Manual](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/) website.
-Specifically,
+Follow the Installation process on the [ROS 2 Documentation: Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html) website and the Quick Start Guide on the [ROBOTIS e-Manual](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/) website. Specifically, follow the steps below.
+
+_*** Ensure Auto Logon, Automatic Joining of Router, and SSH are enabled on all robots ***_
 ## Setup Sources and Install ROS 2 Package
 ```
 locale (check for utf-8)
@@ -86,3 +88,53 @@ echo 'ROS_HOSTNAME={ROS_MASTER_IP}' >> ~/.bashrc
 echo 'TURTLEBOT3_MODEL=burger' >> ~/.bashrc
 source ~/.bashrc
 ```
+## Test TurtleBot3 Movement
+```
+ros2 launch turtlebot3_bring_up robot.launch.py
+ros2 run turtlebot3_teleop teleop_keyboard
+```
+# Multi-Robot System Set Up
+## Create a Workspace
+```
+mkdir -p ~/ro2_ws/src
+cd ~/ros2_ws/src
+```
+## Create a Package
+```
+ros2 pkg create --build-type ament_python py_pubsub
+cd ~/ros2_ws/src/py_pubsub/py_pubsub
+nano socketPub.py
+nano socketSub.py
+```
+_*** The code for socketPub.py and socketSub.py can be found in the ros2_ws folder. ***_
+### Add Entry Points
+```
+cd ~/ros2_ws/src/py_pubsub
+nano setup.py
+```
+Change the contents of setup.py to reflect the following changes:
+```
+entry_points={
+        'console_scripts': [
+                'talker = py_pubsub.socketPub:main',
+                'listener = py_pubsub.socketSub:main',
+        ],
+},
+```
+## Build and Source the Workspace
+```
+cd ~/ros2_ws
+colcon build --packages-select py_pubsub
+echo 'source ~/ros2_ws/install/setup.bash' >> ~/.bashrc
+```
+_***  ***_
+# Running the Mult-Robot System
+The following commands should be executed to run the MRS.
+
+## Running the Jetson
+Open a new terminal and run the following commands to bring up the master robot.
+```
+ros2 launch turtlebot3_bringup robot.launch.py
+```
+_*** Should say Run! if successfully brought up ***_
+Open a new terminal and run the following commands to be able 
