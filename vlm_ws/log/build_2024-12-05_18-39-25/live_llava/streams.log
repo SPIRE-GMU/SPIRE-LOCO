@@ -1,0 +1,24 @@
+[1.317s] Invoking command in '/home/ubu/vlm_ws/src/live_llava': PYTHONPATH=/home/ubu/vlm_ws/build/live_llava/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/live_llava build --build-base /home/ubu/vlm_ws/build/live_llava/build install --record /home/ubu/vlm_ws/build/live_llava/install.log --single-version-externally-managed install_data
+[1.830s] running egg_info
+[1.833s] writing ../../build/live_llava/live_llava.egg-info/PKG-INFO
+[1.834s] writing dependency_links to ../../build/live_llava/live_llava.egg-info/dependency_links.txt
+[1.834s] writing entry points to ../../build/live_llava/live_llava.egg-info/entry_points.txt
+[1.834s] writing requirements to ../../build/live_llava/live_llava.egg-info/requires.txt
+[1.834s] writing top-level names to ../../build/live_llava/live_llava.egg-info/top_level.txt
+[1.838s] reading manifest file '../../build/live_llava/live_llava.egg-info/SOURCES.txt'
+[1.839s] adding license file 'LICENSE'
+[1.840s] writing manifest file '../../build/live_llava/live_llava.egg-info/SOURCES.txt'
+[1.840s] running build
+[1.840s] running build_py
+[1.841s] running install
+[1.842s] running install_lib
+[1.844s] running install_data
+[1.845s] running install_egg_info
+[1.848s] removing '/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava-0.0.0-py3.10.egg-info' (and everything under it)
+[1.849s] Copying ../../build/live_llava/live_llava.egg-info to /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava-0.0.0-py3.10.egg-info
+[1.851s] running install_scripts
+[1.890s] Installing vlm_pub script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava
+[1.890s] Installing vlm_start script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava
+[1.891s] Installing vlm_sub script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava
+[1.891s] writing list of installed files to '/home/ubu/vlm_ws/build/live_llava/install.log'
+[1.945s] Invoked command in '/home/ubu/vlm_ws/src/live_llava' returned '0': PYTHONPATH=/home/ubu/vlm_ws/build/live_llava/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/live_llava build --build-base /home/ubu/vlm_ws/build/live_llava/build install --record /home/ubu/vlm_ws/build/live_llava/install.log --single-version-externally-managed install_data

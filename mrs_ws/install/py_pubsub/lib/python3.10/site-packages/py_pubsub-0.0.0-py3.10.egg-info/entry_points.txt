@@ -1,0 +1,4 @@
+[console_scripts]
+listener = py_pubsub.socketSub:main
+talker = py_pubsub.socketPub:main
+

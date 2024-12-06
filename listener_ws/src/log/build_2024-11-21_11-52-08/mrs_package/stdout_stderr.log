@@ -1,0 +1,36 @@
+running egg_info
+creating ../build/mrs_package/mrs_package.egg-info
+writing ../build/mrs_package/mrs_package.egg-info/PKG-INFO
+writing dependency_links to ../build/mrs_package/mrs_package.egg-info/dependency_links.txt
+writing entry points to ../build/mrs_package/mrs_package.egg-info/entry_points.txt
+writing requirements to ../build/mrs_package/mrs_package.egg-info/requires.txt
+writing top-level names to ../build/mrs_package/mrs_package.egg-info/top_level.txt
+writing manifest file '../build/mrs_package/mrs_package.egg-info/SOURCES.txt'
+reading manifest file '../build/mrs_package/mrs_package.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/mrs_package/mrs_package.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ubu/listener_ws/src/build/mrs_package/build
+creating /home/ubu/listener_ws/src/build/mrs_package/build/lib
+creating /home/ubu/listener_ws/src/build/mrs_package/build/lib/mrs_package
+copying mrs_package/__init__.py -> /home/ubu/listener_ws/src/build/mrs_package/build/lib/mrs_package
+copying mrs_package/mrs_teleop_ROS2.py -> /home/ubu/listener_ws/src/build/mrs_package/build/lib/mrs_package
+running install
+running install_lib
+creating /home/ubu/listener_ws/src/install/mrs_package/lib/python3.10/site-packages/mrs_package
+copying /home/ubu/listener_ws/src/build/mrs_package/build/lib/mrs_package/__init__.py -> /home/ubu/listener_ws/src/install/mrs_package/lib/python3.10/site-packages/mrs_package
+copying /home/ubu/listener_ws/src/build/mrs_package/build/lib/mrs_package/mrs_teleop_ROS2.py -> /home/ubu/listener_ws/src/install/mrs_package/lib/python3.10/site-packages/mrs_package
+byte-compiling /home/ubu/listener_ws/src/install/mrs_package/lib/python3.10/site-packages/mrs_package/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/ubu/listener_ws/src/install/mrs_package/lib/python3.10/site-packages/mrs_package/mrs_teleop_ROS2.py to mrs_teleop_ROS2.cpython-310.pyc
+running install_data
+creating /home/ubu/listener_ws/src/install/mrs_package/share/ament_index
+creating /home/ubu/listener_ws/src/install/mrs_package/share/ament_index/resource_index
+creating /home/ubu/listener_ws/src/install/mrs_package/share/ament_index/resource_index/packages
+copying resource/mrs_package -> /home/ubu/listener_ws/src/install/mrs_package/share/ament_index/resource_index/packages
+copying package.xml -> /home/ubu/listener_ws/src/install/mrs_package/share/mrs_package
+running install_egg_info
+Copying ../build/mrs_package/mrs_package.egg-info to /home/ubu/listener_ws/src/install/mrs_package/lib/python3.10/site-packages/mrs_package-0.0.0-py3.10.egg-info
+running install_scripts
+Installing mrs_teleop_ROS2 script to /home/ubu/listener_ws/src/install/mrs_package/lib/mrs_package
+writing list of installed files to '/home/ubu/listener_ws/src/build/mrs_package/install.log'

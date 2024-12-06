@@ -1,0 +1,34 @@
+[1.364s] Invoking command in '/home/ubu/vlm_ws/src/live_llava': PYTHONPATH=/home/ubu/vlm_ws/build/live_llava/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/live_llava build --build-base /home/ubu/vlm_ws/build/live_llava/build install --record /home/ubu/vlm_ws/build/live_llava/install.log --single-version-externally-managed install_data
+[1.883s] running egg_info
+[1.887s] writing ../../build/live_llava/live_llava.egg-info/PKG-INFO
+[1.887s] writing dependency_links to ../../build/live_llava/live_llava.egg-info/dependency_links.txt
+[1.888s] writing entry points to ../../build/live_llava/live_llava.egg-info/entry_points.txt
+[1.888s] writing requirements to ../../build/live_llava/live_llava.egg-info/requires.txt
+[1.888s] writing top-level names to ../../build/live_llava/live_llava.egg-info/top_level.txt
+[1.892s] reading manifest file '../../build/live_llava/live_llava.egg-info/SOURCES.txt'
+[1.892s] adding license file 'LICENSE'
+[1.893s] writing manifest file '../../build/live_llava/live_llava.egg-info/SOURCES.txt'
+[1.894s] running build
+[1.894s] running build_py
+[1.894s] copying live_llava/live_llava_pub.py -> /home/ubu/vlm_ws/build/live_llava/build/lib/live_llava
+[1.894s] copying live_llava/live_llava_sub.py -> /home/ubu/vlm_ws/build/live_llava/build/lib/live_llava
+[1.895s] copying live_llava/live_llava_start.py -> /home/ubu/vlm_ws/build/live_llava/build/lib/live_llava
+[1.895s] running install
+[1.895s] running install_lib
+[1.897s] copying /home/ubu/vlm_ws/build/live_llava/build/lib/live_llava/live_llava_pub.py -> /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava
+[1.897s] copying /home/ubu/vlm_ws/build/live_llava/build/lib/live_llava/live_llava_sub.py -> /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava
+[1.898s] copying /home/ubu/vlm_ws/build/live_llava/build/lib/live_llava/live_llava_start.py -> /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava
+[1.899s] byte-compiling /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava/live_llava_pub.py to live_llava_pub.cpython-310.pyc
+[1.900s] byte-compiling /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava/live_llava_sub.py to live_llava_sub.cpython-310.pyc
+[1.901s] byte-compiling /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava/live_llava_start.py to live_llava_start.cpython-310.pyc
+[1.901s] running install_data
+[1.901s] copying package.xml -> /home/ubu/vlm_ws/install/live_llava/share/live_llava
+[1.902s] running install_egg_info
+[1.905s] removing '/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava-0.0.0-py3.10.egg-info' (and everything under it)
+[1.906s] Copying ../../build/live_llava/live_llava.egg-info to /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava-0.0.0-py3.10.egg-info
+[1.908s] running install_scripts
+[1.948s] Installing vlm_pub script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava
+[1.948s] Installing vlm_start script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava
+[1.949s] Installing vlm_sub script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava
+[1.949s] writing list of installed files to '/home/ubu/vlm_ws/build/live_llava/install.log'
+[2.005s] Invoked command in '/home/ubu/vlm_ws/src/live_llava' returned '0': PYTHONPATH=/home/ubu/vlm_ws/build/live_llava/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/live_llava build --build-base /home/ubu/vlm_ws/build/live_llava/build install --record /home/ubu/vlm_ws/build/live_llava/install.log --single-version-externally-managed install_data

@@ -1,0 +1,15 @@
+/home/ubu/listener_ws/install/mrs_package/share/ament_index/resource_index/package_run_dependencies/mrs_package
+/home/ubu/listener_ws/install/mrs_package/share/ament_index/resource_index/parent_prefix_path/mrs_package
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/environment/ament_prefix_path.sh
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/environment/ament_prefix_path.dsv
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/environment/path.sh
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/environment/path.dsv
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/local_setup.bash
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/local_setup.sh
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/local_setup.zsh
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/local_setup.dsv
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/package.dsv
+/home/ubu/listener_ws/install/mrs_package/share/ament_index/resource_index/packages/mrs_package
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/cmake/mrs_packageConfig.cmake
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/cmake/mrs_packageConfig-version.cmake
+/home/ubu/listener_ws/install/mrs_package/share/mrs_package/package.xml

@@ -1,0 +1,3 @@
+[console_scripts]
+mrs_teleop_ROS2 = mrs_package.mrs_teleop_ROS2:main
+

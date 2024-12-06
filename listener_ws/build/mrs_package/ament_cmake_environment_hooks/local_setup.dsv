@@ -1,0 +1,2 @@
+source;share/mrs_package/environment/ament_prefix_path.sh
+source;share/mrs_package/environment/path.sh

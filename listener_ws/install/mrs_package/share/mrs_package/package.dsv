@@ -1,0 +1,9 @@
+source;share/mrs_package/hook/cmake_prefix_path.ps1
+source;share/mrs_package/hook/cmake_prefix_path.dsv
+source;share/mrs_package/hook/cmake_prefix_path.sh
+source;share/mrs_package/hook/pythonpath.ps1
+source;share/mrs_package/hook/pythonpath.dsv
+source;share/mrs_package/hook/pythonpath.sh
+source;share/mrs_package/hook/ament_prefix_path.ps1
+source;share/mrs_package/hook/ament_prefix_path.dsv
+source;share/mrs_package/hook/ament_prefix_path.sh

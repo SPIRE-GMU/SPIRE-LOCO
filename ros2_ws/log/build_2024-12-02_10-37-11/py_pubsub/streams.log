@@ -1,0 +1,41 @@
+[1.212s] Invoking command in '/home/ubu/ros2_ws/src/py_pubsub': PYTHONPATH=/home/ubu/ros2_ws/build/py_pubsub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/ubu/ros2_ws/build/py_pubsub/build install --record /home/ubu/ros2_ws/build/py_pubsub/install.log --single-version-externally-managed install_data
+[1.651s] running egg_info
+[1.652s] creating ../../build/py_pubsub/py_pubsub.egg-info
+[1.652s] writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO
+[1.652s] writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt
+[1.653s] writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt
+[1.653s] writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt
+[1.653s] writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt
+[1.653s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[1.656s] reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[1.657s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[1.658s] running build
+[1.658s] running build_py
+[1.658s] creating /home/ubu/ros2_ws/build/py_pubsub/build
+[1.659s] creating /home/ubu/ros2_ws/build/py_pubsub/build/lib
+[1.659s] creating /home/ubu/ros2_ws/build/py_pubsub/build/lib/py_pubsub
+[1.659s] copying py_pubsub/__init__.py -> /home/ubu/ros2_ws/build/py_pubsub/build/lib/py_pubsub
+[1.659s] copying py_pubsub/socketPub.py -> /home/ubu/ros2_ws/build/py_pubsub/build/lib/py_pubsub
+[1.660s] copying py_pubsub/socketSub.py -> /home/ubu/ros2_ws/build/py_pubsub/build/lib/py_pubsub
+[1.660s] running install
+[1.660s] running install_lib
+[1.661s] creating /home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[1.661s] copying /home/ubu/ros2_ws/build/py_pubsub/build/lib/py_pubsub/__init__.py -> /home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[1.661s] copying /home/ubu/ros2_ws/build/py_pubsub/build/lib/py_pubsub/socketPub.py -> /home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[1.661s] copying /home/ubu/ros2_ws/build/py_pubsub/build/lib/py_pubsub/socketSub.py -> /home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[1.662s] byte-compiling /home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/__init__.py to __init__.cpython-310.pyc
+[1.663s] byte-compiling /home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/socketPub.py to socketPub.cpython-310.pyc
+[1.663s] byte-compiling /home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/socketSub.py to socketSub.cpython-310.pyc
+[1.666s] running install_data
+[1.666s] creating /home/ubu/ros2_ws/install/py_pubsub/share/ament_index
+[1.666s] creating /home/ubu/ros2_ws/install/py_pubsub/share/ament_index/resource_index
+[1.667s] creating /home/ubu/ros2_ws/install/py_pubsub/share/ament_index/resource_index/packages
+[1.667s] copying resource/py_pubsub -> /home/ubu/ros2_ws/install/py_pubsub/share/ament_index/resource_index/packages
+[1.667s] copying package.xml -> /home/ubu/ros2_ws/install/py_pubsub/share/py_pubsub
+[1.667s] running install_egg_info
+[1.670s] Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info
+[1.671s] running install_scripts
+[1.706s] Installing listener script to /home/ubu/ros2_ws/install/py_pubsub/lib/py_pubsub
+[1.706s] Installing talker script to /home/ubu/ros2_ws/install/py_pubsub/lib/py_pubsub
+[1.707s] writing list of installed files to '/home/ubu/ros2_ws/build/py_pubsub/install.log'
+[1.757s] Invoked command in '/home/ubu/ros2_ws/src/py_pubsub' returned '0': PYTHONPATH=/home/ubu/ros2_ws/build/py_pubsub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/ubu/ros2_ws/build/py_pubsub/build install --record /home/ubu/ros2_ws/build/py_pubsub/install.log --single-version-externally-managed install_data

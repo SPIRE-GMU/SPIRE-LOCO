@@ -1,0 +1,41 @@
+[1.596s] Invoking command in '/home/ubu/ros2_caffe/src/py_pubsub': PYTHONPATH=/home/ubu/ros2_caffe/build/py_pubsub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/ubu/ros2_caffe/build/py_pubsub/build install --record /home/ubu/ros2_caffe/build/py_pubsub/install.log --single-version-externally-managed install_data
+[2.152s] running egg_info
+[2.154s] creating ../../build/py_pubsub/py_pubsub.egg-info
+[2.154s] writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO
+[2.155s] writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt
+[2.155s] writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt
+[2.155s] writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt
+[2.155s] writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt
+[2.156s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[2.161s] reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[2.163s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[2.164s] running build
+[2.164s] running build_py
+[2.164s] creating /home/ubu/ros2_caffe/build/py_pubsub/build
+[2.164s] creating /home/ubu/ros2_caffe/build/py_pubsub/build/lib
+[2.164s] creating /home/ubu/ros2_caffe/build/py_pubsub/build/lib/py_pubsub
+[2.165s] copying py_pubsub/caffemove.py -> /home/ubu/ros2_caffe/build/py_pubsub/build/lib/py_pubsub
+[2.165s] copying py_pubsub/__init__.py -> /home/ubu/ros2_caffe/build/py_pubsub/build/lib/py_pubsub
+[2.165s] copying py_pubsub/caffe.py -> /home/ubu/ros2_caffe/build/py_pubsub/build/lib/py_pubsub
+[2.166s] running install
+[2.167s] running install_lib
+[2.169s] creating /home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[2.170s] copying /home/ubu/ros2_caffe/build/py_pubsub/build/lib/py_pubsub/caffemove.py -> /home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[2.170s] copying /home/ubu/ros2_caffe/build/py_pubsub/build/lib/py_pubsub/__init__.py -> /home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[2.170s] copying /home/ubu/ros2_caffe/build/py_pubsub/build/lib/py_pubsub/caffe.py -> /home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[2.171s] byte-compiling /home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/caffemove.py to caffemove.cpython-310.pyc
+[2.173s] byte-compiling /home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/__init__.py to __init__.cpython-310.pyc
+[2.173s] byte-compiling /home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/caffe.py to caffe.cpython-310.pyc
+[2.175s] running install_data
+[2.175s] creating /home/ubu/ros2_caffe/install/py_pubsub/share/ament_index
+[2.175s] creating /home/ubu/ros2_caffe/install/py_pubsub/share/ament_index/resource_index
+[2.175s] creating /home/ubu/ros2_caffe/install/py_pubsub/share/ament_index/resource_index/packages
+[2.176s] copying resource/py_pubsub -> /home/ubu/ros2_caffe/install/py_pubsub/share/ament_index/resource_index/packages
+[2.176s] copying package.xml -> /home/ubu/ros2_caffe/install/py_pubsub/share/py_pubsub
+[2.176s] running install_egg_info
+[2.184s] Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info
+[2.186s] running install_scripts
+[2.235s] Installing listener script to /home/ubu/ros2_caffe/install/py_pubsub/lib/py_pubsub
+[2.235s] Installing talker script to /home/ubu/ros2_caffe/install/py_pubsub/lib/py_pubsub
+[2.236s] writing list of installed files to '/home/ubu/ros2_caffe/build/py_pubsub/install.log'
+[2.326s] Invoked command in '/home/ubu/ros2_caffe/src/py_pubsub' returned '0': PYTHONPATH=/home/ubu/ros2_caffe/build/py_pubsub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/ros2_caffe/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/ubu/ros2_caffe/build/py_pubsub/build install --record /home/ubu/ros2_caffe/build/py_pubsub/install.log --single-version-externally-managed install_data

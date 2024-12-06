@@ -1,0 +1,20 @@
+[0.027s] Invoking command in '/home/ubu/listener_ws/build/mrs_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubu/turtlebot3_ws/install/turtlebot3_teleop:/home/ubu/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/ubu/listener_ws/build/mrs_package -- -j8 -l8
+[0.087s] Invoked command in '/home/ubu/listener_ws/build/mrs_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubu/turtlebot3_ws/install/turtlebot3_teleop:/home/ubu/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/ubu/listener_ws/build/mrs_package -- -j8 -l8
+[0.137s] Invoking command in '/home/ubu/listener_ws/build/mrs_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubu/turtlebot3_ws/install/turtlebot3_teleop:/home/ubu/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/ubu/listener_ws/build/mrs_package
+[0.150s] -- Install configuration: ""
+[0.150s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/ament_index/resource_index/package_run_dependencies/mrs_package
+[0.150s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/ament_index/resource_index/parent_prefix_path/mrs_package
+[0.151s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/environment/ament_prefix_path.sh
+[0.151s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/environment/ament_prefix_path.dsv
+[0.151s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/environment/path.sh
+[0.151s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/environment/path.dsv
+[0.151s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/local_setup.bash
+[0.151s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/local_setup.sh
+[0.151s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/local_setup.zsh
+[0.151s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/local_setup.dsv
+[0.152s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/package.dsv
+[0.152s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/ament_index/resource_index/packages/mrs_package
+[0.152s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/cmake/mrs_packageConfig.cmake
+[0.152s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/cmake/mrs_packageConfig-version.cmake
+[0.152s] -- Up-to-date: /home/ubu/listener_ws/install/mrs_package/share/mrs_package/package.xml
+[0.154s] Invoked command in '/home/ubu/listener_ws/build/mrs_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubu/turtlebot3_ws/install/turtlebot3_teleop:/home/ubu/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/ubu/listener_ws/build/mrs_package
