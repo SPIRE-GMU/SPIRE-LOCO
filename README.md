@@ -205,3 +205,16 @@ ros2 run live_llava vlm_start
 ros2 run live_llava vlm_pub
 ros2 run live_llava vlm_sub
 ```
+Notes on VLM ROS Nodes
+* ros2 run py_pubsub live_llava_start
+  * Sub Runs the command to start the vllm
+  * May take a while
+  * Opens another window to show camera and prompt+output
+  * Output is shown in terminal and sent to ~/output.txt
+* ros2 run py_pubsub live_llava_pub
+  * Reads from output.txt and publishes "stop" or "clear" to the topic "path_status" when detecting certain keywords
+* ros2 run py_pubsub live_llava_sub
+  * Receives information from "path_status"
+  * Stops the TurtleBot when "path_status" is "stop"
+  * Note this is done by simulating pressing the "s" key whenever the subscriber node receives stop
+  * The simulated "s" key press is for the CURRENT WINDOW IN FOCUS, so the terminal running teleop needs to be in-focus
