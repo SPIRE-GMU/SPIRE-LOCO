@@ -1,4 +1,3 @@
-
 ## Create a Workspace
 ```
 mkdir -p ~/ro2_ws/src
