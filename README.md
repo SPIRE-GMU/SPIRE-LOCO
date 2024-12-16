@@ -128,7 +128,7 @@ cd ~/ros2_ws
 colcon build --packages-select py_pubsub
 echo 'source ~/ros2_ws/install/setup.bash' >> ~/.bashrc
 ```
-# Running the Mult-Robot System
+# Running the Multi-Robot System using Sockets
 The following commands should be executed to run the MRS.
 
 ## Running the Master Robot
@@ -157,6 +157,34 @@ Open a new terminal and run the socket subscriber.
 cd ~/ros2_ws
 ros2 run py_pubsub listener
 ```
+
+# Running the Multi-Robot System using FastDDS
+The following commands should be executed to run the MRS.
+
+## Running the Master Robot
+Open a new terminal and create the FastDDS Discovery Server.
+```
+fasstdds discovery --server-id 0 -l {master_ip_address}
+```
+Open a new terminal and  bring up the master robot.
+```
+export ROS_DISCOVERY_SERVER={master_ip_address}
+ros2 launch turtlebot3_bringup robot.launch.py
+```
+_*** Should say Run! if successfully brought up ***_
+
+Open a new terminal and run the following commands to be able to move the master robot.
+```
+export ROS_DISCOVERY_SERVER={master_ip_address}
+ros2 run turtlebot3_teleop teleop_keyboard
+```
+## Running the Listener Robot
+Open a new terminal and bring up the listener robot.
+```
+export ROS_DISCOVERY_SERVER={master_ip_address}
+ros2 launch turtlebot3_bringup robot.launch.py
+```
+
 # Performing SLAM using TurtleBot3
 Follow the SLAM proccess on the [ROBOTIS e-Manual](https://emanual.robotis.com/docs/en/platform/turtlebot3/slam/) Humble. Specifically, follow the steps below.
 
