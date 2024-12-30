@@ -100,7 +100,7 @@ The following commands should be executed to run the MRS.
 ## Running the Master Robot
 Open a new terminal and create the FastDDS Discovery Server.
 ```
-fasstdds discovery --server-id 0 -l {master_ip_address}
+fastdds discovery --server-id 0 -l {master_ip_address}
 ```
 Open a new terminal and  bring up the master robot.
 ```
