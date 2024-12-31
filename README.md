@@ -122,21 +122,38 @@ ros2 launch turtlebot3_bringup robot.launch.py
 ```
 
 # Performing SLAM using TurtleBot3
-Follow the SLAM proccess on the [ROBOTIS e-Manual](https://emanual.robotis.com/docs/en/platform/turtlebot3/slam/) Humble. Specifically, follow the steps below.
+The following SLAM is performed utilizing the slam toolbox.
 
+## Running the Master Robot
+Open the FastDDS Server.
+```
+fastdds discovery --server-id 0 -l 192.168.0.215
+```
+## Running the Listener Robot
+Install the slam toolbox.
+```
+sudo apt install ros-humble-slam-toolbox
+```
 Open a new terminal and bring up the robot.
 ```
 ros2 launch turtlebot3_bringup robot.launch.py
 ```
-Open a new terminal and start the cartographer.
+Open a new terminal and bring up the robot's navigation system.
 ```
-ros2 launch turtlebot3_cartographer cartographer.launch.py
+ros2 launch nav2_bringup navigation_launch.py
 ```
-Open a new terminal and run the following command so the robot can move.
+Open a new terminal and run the following command to create an asynchronous map.
 ```
-ros2 run turtlebot3_teleop teleop_keyboard
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/opt/ros/humble/share/slam_toolbox/config/mapper_params_online_async.yaml use_sim_time:=false
 ```
-
+Open a new terminal and run the following command to create an synchronous map.
+```
+ros2 launch slam_toolbox online_sync_launch.py slam_params_file:=/opt/ros/humble/share/slam_toolbox/config/mapper_params_online_sync.yaml use_sim_time:=false
+```
+Open a new terminal and open rviz to view the map.
+```
+ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz
+```
 
 # Vision Language Model (VLM) Setup
 ## Download Jetson Containers & Associated Models
