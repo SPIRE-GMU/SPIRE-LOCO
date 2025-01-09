@@ -31,7 +31,7 @@ class VLMSub(Node):
 
     def listener_callback(self, msg):
         # Subscribes to all VLLM output
-        self.get_logger().info('VLLM_Output Sub: "%s"' % msg.data)
+        self.get_logger().info('%s' % msg.data)
 
     def set_stop(self, msg):
         # Subscribes to path_status from subscriber
