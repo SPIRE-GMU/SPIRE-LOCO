@@ -1,0 +1,155 @@
+[0.000000] (-) TimerEvent: {}
+[0.001206] (live_llava) JobQueued: {'identifier': 'live_llava', 'dependencies': OrderedDict()}
+[0.001535] (live_llava) JobStarted: {'identifier': 'live_llava'}
+[0.099148] (-) TimerEvent: {}
+[0.199745] (-) TimerEvent: {}
+[0.300360] (-) TimerEvent: {}
+[0.401063] (-) TimerEvent: {}
+[0.501732] (-) TimerEvent: {}
+[0.602416] (-) TimerEvent: {}
+[0.703173] (-) TimerEvent: {}
+[0.803964] (-) TimerEvent: {}
+[0.904730] (-) TimerEvent: {}
+[1.005462] (-) TimerEvent: {}
+[1.106158] (-) TimerEvent: {}
+[1.206833] (-) TimerEvent: {}
+[1.307529] (-) TimerEvent: {}
+[1.408287] (-) TimerEvent: {}
+[1.508997] (-) TimerEvent: {}
+[1.609663] (-) TimerEvent: {}
+[1.710345] (-) TimerEvent: {}
+[1.811018] (-) TimerEvent: {}
+[1.911721] (-) TimerEvent: {}
+[2.012392] (-) TimerEvent: {}
+[2.113077] (-) TimerEvent: {}
+[2.213734] (-) TimerEvent: {}
+[2.314396] (-) TimerEvent: {}
+[2.415114] (-) TimerEvent: {}
+[2.515805] (-) TimerEvent: {}
+[2.616465] (-) TimerEvent: {}
+[2.717145] (-) TimerEvent: {}
+[2.817806] (-) TimerEvent: {}
+[2.918473] (-) TimerEvent: {}
+[3.019128] (-) TimerEvent: {}
+[3.119789] (-) TimerEvent: {}
+[3.220442] (-) TimerEvent: {}
+[3.321126] (-) TimerEvent: {}
+[3.421809] (-) TimerEvent: {}
+[6.253959] (-) TimerEvent: {}
+[6.354685] (-) TimerEvent: {}
+[6.455384] (-) TimerEvent: {}
+[6.556110] (-) TimerEvent: {}
+[6.656828] (-) TimerEvent: {}
+[6.757555] (-) TimerEvent: {}
+[6.858264] (-) TimerEvent: {}
+[6.958979] (-) TimerEvent: {}
+[7.059734] (-) TimerEvent: {}
+[7.160488] (-) TimerEvent: {}
+[7.261170] (-) TimerEvent: {}
+[7.361860] (-) TimerEvent: {}
+[7.462448] (-) TimerEvent: {}
+[7.563136] (-) TimerEvent: {}
+[7.663790] (-) TimerEvent: {}
+[7.764442] (-) TimerEvent: {}
+[7.865092] (-) TimerEvent: {}
+[7.965723] (-) TimerEvent: {}
+[8.066373] (-) TimerEvent: {}
+[8.167016] (-) TimerEvent: {}
+[8.267607] (-) TimerEvent: {}
+[8.368202] (-) TimerEvent: {}
+[8.468798] (-) TimerEvent: {}
+[8.569411] (-) TimerEvent: {}
+[9.109618] (-) TimerEvent: {}
+[9.210248] (-) TimerEvent: {}
+[9.310864] (-) TimerEvent: {}
+[9.411448] (-) TimerEvent: {}
+[9.512075] (-) TimerEvent: {}
+[9.612678] (-) TimerEvent: {}
+[9.713267] (-) TimerEvent: {}
+[9.813847] (-) TimerEvent: {}
+[9.914420] (-) TimerEvent: {}
+[10.014998] (-) TimerEvent: {}
+[10.115568] (-) TimerEvent: {}
+[10.216160] (-) TimerEvent: {}
+[10.316708] (-) TimerEvent: {}
+[10.417247] (-) TimerEvent: {}
+[10.517845] (-) TimerEvent: {}
+[10.618462] (-) TimerEvent: {}
+[10.719048] (-) TimerEvent: {}
+[10.819616] (-) TimerEvent: {}
+[10.920215] (-) TimerEvent: {}
+[11.020794] (-) TimerEvent: {}
+[11.121433] (-) TimerEvent: {}
+[11.222038] (-) TimerEvent: {}
+[11.322652] (-) TimerEvent: {}
+[11.423221] (-) TimerEvent: {}
+[11.523803] (-) TimerEvent: {}
+[11.624416] (-) TimerEvent: {}
+[11.725021] (-) TimerEvent: {}
+[11.825604] (-) TimerEvent: {}
+[11.926164] (-) TimerEvent: {}
+[12.026721] (-) TimerEvent: {}
+[12.127270] (-) TimerEvent: {}
+[12.227852] (-) TimerEvent: {}
+[12.328409] (-) TimerEvent: {}
+[12.429014] (-) TimerEvent: {}
+[12.529588] (-) TimerEvent: {}
+[12.630179] (-) TimerEvent: {}
+[12.730784] (-) TimerEvent: {}
+[12.831357] (-) TimerEvent: {}
+[12.931963] (-) TimerEvent: {}
+[13.032540] (-) TimerEvent: {}
+[13.133117] (-) TimerEvent: {}
+[13.233673] (-) TimerEvent: {}
+[13.334263] (-) TimerEvent: {}
+[13.414981] (live_llava) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/live_llava', 'build', '--build-base', '/home/ubu/vlm_ws/build/live_llava/build', 'install', '--record', '/home/ubu/vlm_ws/build/live_llava/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ubu/vlm_ws/src/live_llava', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubu', 'ROS_NAMESPACE': 'tb3_1', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:', 'HOME': '/home/ubu', 'OLDPWD': '/home/ubu', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2912', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ubu/ros2_ws/install:/home/ubu/ros2_workspace/install:/home/ubu/turtlebot3_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ubu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ubu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/ubu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/2887,unix/ubuntu:/tmp/.ICE-unix/2887', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/21d1bea5_ed9c_4048_a238_18577aa4c72f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.91', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/ubu/ros2_workspace/install/ros2_nanollm:/home/ubu/turtlebot3_ws/install/turtlebot3:/home/ubu/turtlebot3_ws/install/turtlebot3_teleop:/home/ubu/turtlebot3_ws/install/turtlebot3_bringup:/home/ubu/turtlebot3_ws/install/turtlebot3_node:/home/ubu/turtlebot3_ws/install/turtlebot3_example:/home/ubu/turtlebot3_ws/install/turtlebot3_description:/home/ubu/turtlebot3_ws/install/ld08_driver:/home/ubu/ros2_ws/install/py_pubsub:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'ROS_MASTER_URI': 'http://192.168.0.215:11311/', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ubu/vlm_ws/build/live_llava', 'OPENCR_PORT': '/dev/ttyACM0', 'TURTLEBOT3_MODEL': 'burger', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'LDS_MODEL': 'LDS-02', 'PYTHONPATH': '/home/ubu/vlm_ws/build/live_llava/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages:/ros2_workspace/build/ros2_nanollm:/home/ubu/ros2_workspace/install/ros2_nanollm/lib/python3.10/site-packages:/home/ubu/turtlebot3_ws/build/turtlebot3_teleop:/home/ubu/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/ubu/turtlebot3_ws/build/turtlebot3_example:/home/ubu/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/ubu/ros2_ws/install/py_pubsub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'ROS_HOSTNAME': '192.168.0.215', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/ubu/turtlebot3_ws/install/turtlebot3:/home/ubu/turtlebot3_ws/install/turtlebot3_bringup:/home/ubu/turtlebot3_ws/install/turtlebot3_node:/home/ubu/turtlebot3_ws/install/turtlebot3_description:/home/ubu/turtlebot3_ws/install/ld08_driver', 'OPENCR_MODEL': 'burger'}, 'shell': False}
+[13.434358] (-) TimerEvent: {}
+[13.534874] (-) TimerEvent: {}
+[13.635583] (-) TimerEvent: {}
+[13.736326] (-) TimerEvent: {}
+[13.837034] (-) TimerEvent: {}
+[13.937768] (-) TimerEvent: {}
+[14.028764] (live_llava) StdoutLine: {'line': b'running egg_info\n'}
+[20.323510] (-) TimerEvent: {}
+[20.323993] (live_llava) StdoutLine: {'line': b'writing ../../build/live_llava/live_llava.egg-info/PKG-INFO\n'}
+[20.324516] (live_llava) StdoutLine: {'line': b'writing dependency_links to ../../build/live_llava/live_llava.egg-info/dependency_links.txt\n'}
+[20.324805] (live_llava) StdoutLine: {'line': b'writing entry points to ../../build/live_llava/live_llava.egg-info/entry_points.txt\n'}
+[20.325058] (live_llava) StdoutLine: {'line': b'writing requirements to ../../build/live_llava/live_llava.egg-info/requires.txt\n'}
+[20.325296] (live_llava) StdoutLine: {'line': b'writing top-level names to ../../build/live_llava/live_llava.egg-info/top_level.txt\n'}
+[20.329993] (live_llava) StdoutLine: {'line': b"reading manifest file '../../build/live_llava/live_llava.egg-info/SOURCES.txt'\n"}
+[20.330517] (live_llava) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[20.331338] (live_llava) StdoutLine: {'line': b"writing manifest file '../../build/live_llava/live_llava.egg-info/SOURCES.txt'\n"}
+[20.331655] (live_llava) StdoutLine: {'line': b'running build\n'}
+[20.331918] (live_llava) StdoutLine: {'line': b'running build_py\n'}
+[20.332262] (live_llava) StdoutLine: {'line': b'copying live_llava/live_llava_start.py -> /home/ubu/vlm_ws/build/live_llava/build/lib/live_llava\n'}
+[20.332789] (live_llava) StdoutLine: {'line': b'running install\n'}
+[20.333283] (live_llava) StdoutLine: {'line': b'running install_lib\n'}
+[20.335200] (live_llava) StdoutLine: {'line': b'copying /home/ubu/vlm_ws/build/live_llava/build/lib/live_llava/live_llava_start.py -> /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava\n'}
+[20.418551] (live_llava) StdoutLine: {'line': b'byte-compiling /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava/live_llava_start.py to live_llava_start.cpython-310.pyc\n'}
+[20.419503] (live_llava) StdoutLine: {'line': b'running install_data\n'}
+[20.419865] (live_llava) StdoutLine: {'line': b'running install_egg_info\n'}
+[20.423587] (-) TimerEvent: {}
+[20.424006] (live_llava) StdoutLine: {'line': b"removing '/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[20.424592] (live_llava) StdoutLine: {'line': b'Copying ../../build/live_llava/live_llava.egg-info to /home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages/live_llava-0.0.0-py3.10.egg-info\n'}
+[20.426432] (live_llava) StdoutLine: {'line': b'running install_scripts\n'}
+[20.471584] (live_llava) StdoutLine: {'line': b'Installing vlm_dos script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava\n'}
+[20.472060] (live_llava) StdoutLine: {'line': b'Installing vlm_pub script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava\n'}
+[20.472455] (live_llava) StdoutLine: {'line': b'Installing vlm_start script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava\n'}
+[20.472725] (live_llava) StdoutLine: {'line': b'Installing vlm_sub script to /home/ubu/vlm_ws/install/live_llava/lib/live_llava\n'}
+[20.473122] (live_llava) StdoutLine: {'line': b"writing list of installed files to '/home/ubu/vlm_ws/build/live_llava/install.log'\n"}
+[20.523708] (-) TimerEvent: {}
+[20.541693] (live_llava) CommandEnded: {'returncode': 0}
+[20.623903] (-) TimerEvent: {}
+[20.724772] (-) TimerEvent: {}
+[20.825372] (-) TimerEvent: {}
+[20.925990] (-) TimerEvent: {}
+[21.026554] (-) TimerEvent: {}
+[21.127121] (-) TimerEvent: {}
+[21.227750] (-) TimerEvent: {}
+[21.328373] (-) TimerEvent: {}
+[21.429095] (-) TimerEvent: {}
+[21.529801] (-) TimerEvent: {}
+[21.630456] (-) TimerEvent: {}
+[21.731048] (-) TimerEvent: {}
+[21.831670] (-) TimerEvent: {}
+[21.932381] (-) TimerEvent: {}
