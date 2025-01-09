@@ -1,0 +1,129 @@
+[0.291s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.291s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff92f77250>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff92f761a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff92f761a0>>)
+[0.901s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.902s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.902s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.902s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.902s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.902s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.902s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubu/vlm_ws'
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.903s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.903s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.903s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.903s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.903s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.903s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.903s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/live_llava) by extensions ['ignore', 'ignore_ament_install']
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/live_llava) by extension 'ignore'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/live_llava) by extension 'ignore_ament_install'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/live_llava) by extensions ['colcon_pkg']
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/live_llava) by extension 'colcon_pkg'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/live_llava) by extensions ['colcon_meta']
+[0.953s] Level 1:colcon.colcon_core.package_identification:_identify(src/live_llava) by extension 'colcon_meta'
+[0.953s] Level 1:colcon.colcon_core.package_identification:_identify(src/live_llava) by extensions ['ros']
+[0.953s] Level 1:colcon.colcon_core.package_identification:_identify(src/live_llava) by extension 'ros'
+[0.960s] DEBUG:colcon.colcon_core.package_identification:Package 'src/live_llava' with type 'ros.ament_python' and name 'live_llava'
+[0.960s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.960s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.960s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.960s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.960s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.007s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.007s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.016s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ubu/ros2_ws/install
+[1.017s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ubu/ros2_workspace/install
+[1.018s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/ubu/turtlebot3_ws/install
+[1.021s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 369 installed packages in /opt/ros/humble
+[1.026s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.126s] Level 5:colcon.colcon_core.verb:set package 'live_llava' build argument 'cmake_args' from command line to 'None'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'live_llava' build argument 'cmake_target' from command line to 'None'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'live_llava' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'live_llava' build argument 'cmake_clean_cache' from command line to 'False'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'live_llava' build argument 'cmake_clean_first' from command line to 'False'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'live_llava' build argument 'cmake_force_configure' from command line to 'False'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'live_llava' build argument 'ament_cmake_args' from command line to 'None'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'live_llava' build argument 'catkin_cmake_args' from command line to 'None'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'live_llava' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.127s] DEBUG:colcon.colcon_core.verb:Building package 'live_llava' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubu/vlm_ws/build/live_llava', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubu/vlm_ws/install/live_llava', 'merge_install': False, 'path': '/home/ubu/vlm_ws/src/live_llava', 'symlink_install': False, 'test_result_base': None}
+[1.127s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.130s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.130s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubu/vlm_ws/src/live_llava' with build type 'ament_python'
+[1.130s] Level 1:colcon.colcon_core.shell:create_environment_hook('live_llava', 'ament_prefix_path')
+[1.137s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.138s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubu/vlm_ws/install/live_llava/share/live_llava/hook/ament_prefix_path.ps1'
+[1.139s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubu/vlm_ws/install/live_llava/share/live_llava/hook/ament_prefix_path.dsv'
+[1.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubu/vlm_ws/install/live_llava/share/live_llava/hook/ament_prefix_path.sh'
+[1.143s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.143s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.835s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubu/vlm_ws/src/live_llava'
+[1.835s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.835s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.701s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubu/vlm_ws/src/live_llava': PYTHONPATH=/home/ubu/vlm_ws/build/live_llava/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/live_llava build --build-base /home/ubu/vlm_ws/build/live_llava/build install --record /home/ubu/vlm_ws/build/live_llava/install.log --single-version-externally-managed install_data
+[3.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubu/vlm_ws/src/live_llava' returned '0': PYTHONPATH=/home/ubu/vlm_ws/build/live_llava/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/live_llava build --build-base /home/ubu/vlm_ws/build/live_llava/build install --record /home/ubu/vlm_ws/build/live_llava/install.log --single-version-externally-managed install_data
+[3.434s] Level 1:colcon.colcon_core.environment:checking '/home/ubu/vlm_ws/install/live_llava' for CMake module files
+[3.436s] Level 1:colcon.colcon_core.environment:checking '/home/ubu/vlm_ws/install/live_llava' for CMake config files
+[3.438s] Level 1:colcon.colcon_core.environment:checking '/home/ubu/vlm_ws/install/live_llava/lib'
+[3.439s] Level 1:colcon.colcon_core.environment:checking '/home/ubu/vlm_ws/install/live_llava/bin'
+[3.439s] Level 1:colcon.colcon_core.environment:checking '/home/ubu/vlm_ws/install/live_llava/lib/pkgconfig/live_llava.pc'
+[3.440s] Level 1:colcon.colcon_core.environment:checking '/home/ubu/vlm_ws/install/live_llava/lib/python3.10/site-packages'
+[3.441s] Level 1:colcon.colcon_core.shell:create_environment_hook('live_llava', 'pythonpath')
+[3.442s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubu/vlm_ws/install/live_llava/share/live_llava/hook/pythonpath.ps1'
+[3.444s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubu/vlm_ws/install/live_llava/share/live_llava/hook/pythonpath.dsv'
+[3.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubu/vlm_ws/install/live_llava/share/live_llava/hook/pythonpath.sh'
+[3.447s] Level 1:colcon.colcon_core.environment:checking '/home/ubu/vlm_ws/install/live_llava/bin'
+[3.448s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(live_llava)
+[3.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubu/vlm_ws/install/live_llava/share/live_llava/package.ps1'
+[3.453s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubu/vlm_ws/install/live_llava/share/live_llava/package.dsv'
+[3.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubu/vlm_ws/install/live_llava/share/live_llava/package.sh'
+[3.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubu/vlm_ws/install/live_llava/share/live_llava/package.bash'
+[3.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubu/vlm_ws/install/live_llava/share/live_llava/package.zsh'
+[3.464s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubu/vlm_ws/install/live_llava/share/colcon-core/packages/live_llava)
+[3.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.467s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.487s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.488s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.488s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.547s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.549s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubu/vlm_ws/install/local_setup.ps1'
+[3.553s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubu/vlm_ws/install/_local_setup_util_ps1.py'
+[3.558s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubu/vlm_ws/install/setup.ps1'
+[3.564s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubu/vlm_ws/install/local_setup.sh'
+[3.567s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubu/vlm_ws/install/_local_setup_util_sh.py'
+[3.570s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubu/vlm_ws/install/setup.sh'
+[3.575s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubu/vlm_ws/install/local_setup.bash'
+[3.578s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubu/vlm_ws/install/setup.bash'
+[3.583s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubu/vlm_ws/install/local_setup.zsh'
+[3.585s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubu/vlm_ws/install/setup.zsh'
