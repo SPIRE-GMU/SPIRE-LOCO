@@ -15,12 +15,12 @@ class StartVLLM(Node):
         os.system("""
             jetson-containers run $(autotag dustynv/nano_llm) \
                 python3 -m nano_llm.agents.video_query --api=mlc \
-                    --model Efficient-Large-Model/VILA-2.7b \
+                    --model liuhaotian/llava-v1.5-7b \
                     --max-context-len 256 \
-                    --max-new-tokens 64 \
+                    --max-new-tokens 2048 \
                     --video-input /dev/video0 \
                     --video-output display://0 \
-                    --prompt "See if there are any signs in the image and respond with a confidence score for the image. Based on the sign, what would a driver do?" | tee ~/output.txt
+                    --prompt "Repeat 'Hello' 1000 times"
             """)
 
 def main(args=None):

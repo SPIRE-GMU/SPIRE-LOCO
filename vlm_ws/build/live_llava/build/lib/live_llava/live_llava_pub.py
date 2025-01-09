@@ -15,13 +15,14 @@ from rclpy.node import Node
 
 from std_msgs.msg import String
 
-class MinimalPublisher(Node):
+class VLMPub(Node):
 
     def __init__(self):
-        super().__init__('minimal_publisher')
+        super().__init__('VLM_Pub')
         # self.publisherAll_ = self.create_publisher(String, 'VLLM_Output', 10)
         self.publisherStop_ = self.create_publisher(String, 'VLLM_Stop', 10)
         self.path_status = String()  # Should be "Clear" or "Stop"
+
         # self.publishAll()
         self.publishStop()
 
@@ -38,36 +39,39 @@ class MinimalPublisher(Node):
             time.sleep(1)
 
     def publishStop(self):
-        keywords = ["person", "people", "man", "men", "woman", "women", "stop"]
+        keywords = ["sign", "signs"]
 
         while True:
             # Creates ROS2 String object and puts the last line from the VLLM output as its data
             out = String()
             out.data = os.popen("tail -n 1 ~/output.txt").read()
 
-            # If stop is in VLLM output, publishes "Stop"/"Clear" to topic "VLLM_Stop"
+            # If a keyword is in VLLM output, publishes "Stop"/"Clear" to topic "VLLM_Stop"
             for word in keywords:
-                if word in out.data.lower():
+                if ("no sign" in out.data.lower()) or ("no signs" in out.data.lower()):
+                    self.path_status = "clear"
+                    break # Only keep break if keywords are only "sign" and "signs"
+                elif word in out.data.lower():
                     self.path_status.data = "Stop"
                     break
                 else:
                     self.path_status.data = "Clear"
             self.publisherStop_.publish(self.path_status)
-            self.get_logger().info('VLLM Stop Pub: "%s"' % self.path_status.data)
+            self.get_logger().info('%s' % self.path_status.data)
             time.sleep(1)
 
 
 def main(args=None):
     rclpy.init(args=args)
 
-    minimal_publisher = MinimalPublisher()
+    vlm_pub = VLMPub()
 
-    rclpy.spin(minimal_publisher)
+    rclpy.spin(vlm_pub)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    minimal_publisher.destroy_node()
+    vlm_pub.destroy_node()
     rclpy.shutdown()
 
 

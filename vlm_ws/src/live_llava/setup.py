@@ -22,7 +22,8 @@ setup(
         'console_scripts': [
         	'vlm_start = live_llava.live_llava_start:main',
 		'vlm_pub = live_llava.live_llava_pub:main',
-		'vlm_sub = live_llava.live_llava_sub:main',        	
+		'vlm_sub = live_llava.live_llava_sub:main', 
+		'vlm_dos = live_llava.live_llava_dos:main',        	
         ],
     },
 )

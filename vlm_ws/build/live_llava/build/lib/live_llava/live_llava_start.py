@@ -9,19 +9,18 @@ class StartVLLM(Node):
 
     def __init__(self):
         super().__init__('start_vllm')
-        self.path_status = ""  # Should be "Clear" or "Stop"
         self.start_live_llava()
 
     def start_live_llava(self):
         os.system("""
-            jetson-containers run $(autotag nano_llm) \
+            jetson-containers run $(autotag dustynv/nano_llm) \
                 python3 -m nano_llm.agents.video_query --api=mlc \
-                    --model liuhaotian/llava-v1.5-7b \
+                    --model Efficient-Large-Model/VILA-2.7b \
                     --max-context-len 256 \
-                    --max-new-tokens 32 \
+                    --max-new-tokens 64 \
                     --video-input /dev/video0 \
                     --video-output display://0 \
-                    | tee ~/output.txt
+                    --prompt "See if there are any signs in the image and respond with a confidence score for the image. Based on the sign, what would a driver do?" | tee ~/output.txt
             """)
 
 def main(args=None):

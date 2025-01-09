@@ -10,6 +10,7 @@ setup.py
 ../../build/live_llava/live_llava.egg-info/top_level.txt
 ../../build/live_llava/live_llava.egg-info/zip-safe
 live_llava/__init__.py
+live_llava/live_llava_dos.py
 live_llava/live_llava_pub.py
 live_llava/live_llava_start.py
 live_llava/live_llava_sub.py
