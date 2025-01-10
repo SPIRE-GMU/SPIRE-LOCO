@@ -1,6 +1,6 @@
-# SPIRE-LOCO
+# Autonomous Robots, Visual Language Models, and Road Sign Tests
 
-LOCO: Secure Localization for Multi-Robot Systems in Dynamic Environments
+Autonomous Robots, Visual Language Models, and Road Sign Tests
 Multi-robot systems (MRS) are used in a variety of real-world applications, such as transportation and manufacturing. The project will have a MRS consistsing of TurtleBots, with one being a leader to transmit commands to follower robots. The leader TurtleBot will have a Jetson AGX Orin Dev Kit (32GB) and a webcam. A visual language model (VLM) will be used to interpret the webcam feed and will influence the TurtleBots' movements. Lastly, penetration testing will be performed to attack the operating system (OS) of the TurtleBots, Robotic Operating System (ROS), and then progagate that attack to the VLM or vice versa.
 
 # Hardware/Software Requirements
