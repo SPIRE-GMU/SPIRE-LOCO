@@ -1,0 +1,424 @@
+V4L2_DEVICES:  --device /dev/video0  --device /dev/video1 
+### DISPLAY environmental variable is already set: ":1"
+localuser:root being added to access control list
+/usr/local/lib/python3.10/dist-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Fetching 10 files:   0% 0/10 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Fetching 10 files: 100% 10/10 [00:00<00:00, 12814.86it/s]
+Fetching 12 files:   0% 0/12 [00:00<?, ?it/s]Fetching 12 files: 100% 12/12 [00:00<00:00, 22826.14it/s]
+18:05:57 | INFO | loading /data/models/huggingface/models--Efficient-Large-Model--VILA-2.7b/snapshots/2ed82105eefd5926cccb46af9e71b0ca77f12704 with MLC
+18:06:01 | INFO | NumExpr defaulting to 12 threads.
+[33m18:06:02 | WARNING | AWQ not installed (requires JetPack 6 / L4T R36) - AWQ models will fail to initialize[0m
+18:06:03 | INFO | patching model config with {'model_type': 'llama'}
+18:06:04 | INFO | device=cuda(0), name=Orin, compute=8.7, max_clocks=1300000, multiprocessors=16, max_thread_dims=[1024, 1024, 64], api_version=12060, driver_version=None
+18:06:04 | INFO | loading VILA-2.7b from /data/models/mlc/dist/VILA-2.7b/ctx256/VILA-2.7b-q4f16_ft/VILA-2.7b-q4f16_ft-cuda.so
+[33m18:06:04 | WARNING | model library /data/models/mlc/dist/VILA-2.7b/ctx256/VILA-2.7b-q4f16_ft/VILA-2.7b-q4f16_ft-cuda.so was missing metadata[0m
+18:06:20 | INFO | loading clip vision model openai/clip-vit-large-patch14-336
+/usr/local/lib/python3.10/dist-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+18:06:22 | INFO | loading TensorRT model from /root/.cache/clip_trt/openai-clip-vit-large-patch14-336_trt-1040_sm87_vision_projector.pt
+/opt/clip_trt/clip_trt/vision.py:154: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  trt_model.load_state_dict(torch.load(trt_path))
+[01/02/2025-18:06:28] [TRT] [W] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+18:06:28 | INFO | benchmarking clip vision model openai/clip-vit-large-patch14-336
+18:06:30 | INFO | torch time:  387.1129173330701 ms
+[01/02/2025-18:06:30] [TRT] [W] Using default stream in enqueueV3() may lead to performance issues due to additional calls to cudaStreamSynchronize() by TensorRT to ensure correct synchronization. Please use non-default stream instead.
+18:06:30 | INFO | trt time:    39.191082666851194 ms
+18:06:31 | INFO | y^ delta:    0.009745001792907715
+18:06:31 | INFO | loaded clip vision model openai/clip-vit-large-patch14-336
+/opt/NanoLLM/nano_llm/vision/mm_projector.py:146: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(filename, map_location='cpu')
+18:06:31 | INFO | mm_projector (mlp2x_gelu)  Sequential(
+  (0): Linear(in_features=1024, out_features=2560, bias=True)
+  (1): GELU(approximate='none')
+  (2): Linear(in_features=2560, out_features=2560, bias=True)
+)
+18:06:31 | INFO | mm_projector weights:  dict_keys(['0.bias', '0.weight', '2.bias', '2.weight'])
+[32m┌────────────────────────────┬─────────────────────────────────────────────────────────────────────────────┐
+│ _name_or_path              │ ./checkpoints/vila-sheared-llama-2.7b-256gpus-mmc4-coyo                     │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ architectures              │ ['LlavaLlamaForCausalLM']                                                   │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ attention_bias             │ False                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ attention_dropout          │ 0.0                                                                         │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ bos_token_id               │ 1                                                                           │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ eos_token_id               │ 2                                                                           │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ freeze_mm_mlp_adapter      │ False                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ hidden_act                 │ silu                                                                        │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ hidden_size                │ 2560                                                                        │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ image_aspect_ratio         │ pad                                                                         │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ initializer_range          │ 0.02                                                                        │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ intermediate_size          │ 6912                                                                        │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ max_position_embeddings    │ 4096                                                                        │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ mm_hidden_size             │ 1024                                                                        │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ mm_projector_lr            │                                                                             │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ mm_projector_type          │ mlp2x_gelu                                                                  │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ mm_use_im_patch_token      │ False                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ mm_use_im_start_end        │ False                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ mm_vision_select_feature   │ patch                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ mm_vision_select_layer     │ -2                                                                          │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ mm_vision_tower            │ openai/clip-vit-large-patch14-336                                           │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ model_type                 │ llama                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ num_attention_heads        │ 20                                                                          │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ num_hidden_layers          │ 32                                                                          │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ num_key_value_heads        │ 20                                                                          │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ pad_token_id               │ 0                                                                           │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ pretraining_tp             │ 1                                                                           │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ rms_norm_eps               │ 1e-05                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ rope_scaling               │                                                                             │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ rope_theta                 │ 10000.0                                                                     │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ tie_word_embeddings        │ False                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ tokenizer_model_max_length │ 4096                                                                        │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ tokenizer_padding_side     │ right                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ torch_dtype                │ bfloat16                                                                    │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ transformers_version       │ 4.38.1                                                                      │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ tune_mm_mlp_adapter        │ False                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ use_cache                  │ True                                                                        │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ use_mm_proj                │ True                                                                        │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ vocab_size                 │ 32000                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ name                       │ VILA-2.7b                                                                   │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ api                        │ mlc                                                                         │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ mm_projector_path          │ /data/models/huggingface/models--Efficient-Large-Model--VILA-2.7b/snapshots │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ quant                      │ q4f16_ft                                                                    │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ type                       │ llama                                                                       │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ max_length                 │ 256                                                                         │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ prefill_chunk_size         │ -1                                                                          │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ load_time                  │ 33.596802015999856                                                          │
+├────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
+│ params_size                │ 1300.8330078125                                                             │
+└────────────────────────────┴─────────────────────────────────────────────────────────────────────────────┘[0m
+
+18:06:31 | INFO | using chat template 'vicuna-v1' for model VILA-2.7b
+18:06:31 | INFO | model 'VILA-2.7b', chat template 'vicuna-v1' stop tokens:  ['</s>'] -> [2]
+18:06:31 | INFO | Warming up LLM with query 'What is 2+2?'
+18:06:34 | INFO | Warmup response:  '2+2 is a mathematical expression that represents the sum of two numbers. It is a simple yet powerful operation that is used in many areas of mathematics, including algebra, number theory, and statistics. The expression "2+2" is a shorthand way of writing the mathematical expression "2 \* 2", which represents the sum of two numbers.\n\n2+2 is a shorthand way of writing the mathematical expression "2 \* 2"\n\nThe expression "2+2" is a shorthand way of writing the mathematical expression "2 \* 2"</s>'
+18:06:34 | INFO | plugin | connected PrintStream to on_text on channel 0
+18:06:34 | INFO | plugin | connected ChatQuery to PrintStream on channel 0
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+(gst-plugin-scanner:108): GLib-GObject-[1;33mWARNING[0m **: [34m18:06:35.281[0m: cannot register existing type 'GstRtpSrc'
+
+(gst-plugin-scanner:108): GLib-GObject-[1;35mCRITICAL[0m **: [34m18:06:35.282[0m: g_type_add_interface_static: assertion 'G_TYPE_IS_INSTANTIATABLE (instance_type)' failed
+
+(gst-plugin-scanner:108): GLib-[1;35mCRITICAL[0m **: [34m18:06:35.282[0m: g_once_init_leave: assertion 'result != 0' failed
+
+(gst-plugin-scanner:108): GStreamer-[1;35mCRITICAL[0m **: [34m18:06:35.282[0m: gst_element_register: assertion 'g_type_is_a (type, GST_TYPE_ELEMENT)' failed
+
+(gst-plugin-scanner:108): GLib-GObject-[1;33mWARNING[0m **: [34m18:06:35.282[0m: cannot register existing type 'GstRtpSink'
+
+(gst-plugin-scanner:108): GLib-GObject-[1;35mCRITICAL[0m **: [34m18:06:35.282[0m: g_type_add_interface_static: assertion 'G_TYPE_IS_INSTANTIATABLE (instance_type)' failed
+
+(gst-plugin-scanner:108): GLib-[1;35mCRITICAL[0m **: [34m18:06:35.282[0m: g_once_init_leave: assertion 'result != 0' failed
+
+(gst-plugin-scanner:108): GStreamer-[1;35mCRITICAL[0m **: [34m18:06:35.282[0m: gst_element_register: assertion 'g_type_is_a (type, GST_TYPE_ELEMENT)' failed
+sh: 1: lsmod: not found
+sh: 1: modprobe: not found
+[gstreamer] initialized gstreamer, version 1.20.3.0
+[gstreamer] gstCamera -- attempting to create device v4l2:///dev/video0
+[gstreamer] gstCamera -- found v4l2 device: C270 HD WEBCAM
+[gstreamer] v4l2-proplist, device.path=(string)/dev/video0, udev-probed=(boolean)false, device.api=(string)v4l2, v4l2.device.driver=(string)uvcvideo, v4l2.device.card=(string)"C270\ HD\ WEBCAM", v4l2.device.bus_info=(string)usb-3610000.usb-4.4, v4l2.device.version=(uint)331668, v4l2.device.capabilities=(uint)2225078273, v4l2.device.device_caps=(uint)69206017;
+[gstreamer] gstCamera -- found 36 caps for v4l2 device /dev/video0
+[gstreamer] [0] video/x-raw, format=(string)YUY2, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 10/1, 15/2, 5/1 };
+[gstreamer] [1] video/x-raw, format=(string)YUY2, width=(int)1184, height=(int)656, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 10/1, 15/2, 5/1 };
+[gstreamer] [2] video/x-raw, format=(string)YUY2, width=(int)960, height=(int)720, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 10/1, 15/2, 5/1 };
+[gstreamer] [3] video/x-raw, format=(string)YUY2, width=(int)1024, height=(int)576, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 10/1, 15/2, 5/1 };
+[gstreamer] [4] video/x-raw, format=(string)YUY2, width=(int)960, height=(int)544, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [5] video/x-raw, format=(string)YUY2, width=(int)800, height=(int)600, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [6] video/x-raw, format=(string)YUY2, width=(int)864, height=(int)480, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [7] video/x-raw, format=(string)YUY2, width=(int)800, height=(int)448, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [8] video/x-raw, format=(string)YUY2, width=(int)752, height=(int)416, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [9] video/x-raw, format=(string)YUY2, width=(int)640, height=(int)480, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [10] video/x-raw, format=(string)YUY2, width=(int)640, height=(int)360, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [11] video/x-raw, format=(string)YUY2, width=(int)544, height=(int)288, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [12] video/x-raw, format=(string)YUY2, width=(int)432, height=(int)240, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [13] video/x-raw, format=(string)YUY2, width=(int)352, height=(int)288, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [14] video/x-raw, format=(string)YUY2, width=(int)320, height=(int)240, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [15] video/x-raw, format=(string)YUY2, width=(int)320, height=(int)176, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [16] video/x-raw, format=(string)YUY2, width=(int)176, height=(int)144, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [17] video/x-raw, format=(string)YUY2, width=(int)160, height=(int)120, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [18] image/jpeg, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [19] image/jpeg, width=(int)1184, height=(int)656, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [20] image/jpeg, width=(int)960, height=(int)720, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [21] image/jpeg, width=(int)1024, height=(int)576, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [22] image/jpeg, width=(int)960, height=(int)544, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [23] image/jpeg, width=(int)800, height=(int)600, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [24] image/jpeg, width=(int)864, height=(int)480, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [25] image/jpeg, width=(int)800, height=(int)448, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [26] image/jpeg, width=(int)752, height=(int)416, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [27] image/jpeg, width=(int)640, height=(int)480, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [28] image/jpeg, width=(int)640, height=(int)360, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [29] image/jpeg, width=(int)544, height=(int)288, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [30] image/jpeg, width=(int)432, height=(int)240, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [31] image/jpeg, width=(int)352, height=(int)288, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [32] image/jpeg, width=(int)320, height=(int)240, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [33] image/jpeg, width=(int)320, height=(int)176, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [34] image/jpeg, width=(int)176, height=(int)144, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [35] image/jpeg, width=(int)160, height=(int)120, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] gstCamera -- selected device profile:  codec=MJPEG format=unknown width=1280 height=720 framerate=30
+[gstreamer] gstCamera pipeline string:
+[gstreamer] v4l2src device=/dev/video0 do-timestamp=true ! image/jpeg, width=(int)1280, height=(int)720, framerate=30/1 ! jpegdec name=decoder ! video/x-raw ! appsink name=mysink sync=false
+[gstreamer] gstCamera successfully created device v4l2:///dev/video0
+[0;32m[video]  created gstCamera from v4l2:///dev/video0
+[0m------------------------------------------------
+gstCamera video options:
+------------------------------------------------
+  -- URI: v4l2:///dev/video0
+     - protocol:  v4l2
+     - location:  /dev/video0
+  -- deviceType: v4l2
+  -- ioType:     input
+  -- codec:      MJPEG
+  -- codecType:  cpu
+  -- width:      1280
+  -- height:     720
+  -- frameRate:  30
+  -- numBuffers: 4
+  -- zeroCopy:   true
+  -- flipMethod: none
+  -- sslCert     /etc/ssl/private/localhost.cert.pem
+  -- sslKey      /etc/ssl/private/localhost.key.pem
+------------------------------------------------
+[OpenGL] glDisplay -- X screen 0 resolution:  1920x1080
+[OpenGL] glDisplay -- X window resolution:    1920x1080
+[OpenGL] glDisplay -- display device initialized (1920x1080)
+[0;32m[video]  created glDisplay from display://0
+[0m------------------------------------------------
+glDisplay video options:
+------------------------------------------------
+  -- URI: display://0
+     - protocol:  display
+     - location:  0
+  -- deviceType: display
+  -- ioType:     output
+  -- width:      1920
+  -- height:     1080
+  -- frameRate:  0
+  -- numBuffers: 4
+  -- zeroCopy:   true
+  -- sslCert     /etc/ssl/private/localhost.cert.pem
+  -- sslKey      /etc/ssl/private/localhost.key.pem
+------------------------------------------------
+18:06:36 | INFO | plugin | connected VideoSource to on_video on channel 0
+18:06:36 | INFO | mounting webserver path /data/datasets/uploads to /images/uploads
+[gstreamer] opening gstCamera for streaming, transitioning pipeline to GST_STATE_PLAYING
+18:06:36 | INFO | starting webserver @ https://0.0.0.0:8050
+[gstreamer] gstreamer changed state from NULL to READY ==> mysink
+[gstreamer] gstreamer changed state from NULL to READY ==> capsfilter1
+[gstreamer] gstreamer changed state from NULL to READY ==> decoder
+[gstreamer] gstreamer changed state from NULL to READY ==> capsfilter0
+[gstreamer] gstreamer changed state from NULL to READY ==> v4l2src0
+[gstreamer] gstreamer changed state from NULL to READY ==> pipeline0
+[gstreamer] gstreamer changed state from READY to PAUSED ==> capsfilter1
+[gstreamer] gstreamer changed state from READY to PAUSED ==> decoder
+[gstreamer] gstreamer changed state from READY to PAUSED ==> capsfilter0
+[gstreamer] gstreamer stream status CREATE ==> src
+[gstreamer] gstreamer changed state from READY to PAUSED ==> v4l2src0
+[gstreamer] gstreamer changed state from READY to PAUSED ==> pipeline0
+[gstreamer] gstreamer message new-clock ==> pipeline0
+[gstreamer] gstreamer stream status ENTER ==> src
+[gstreamer] gstreamer changed state from PAUSED to PLAYING ==> capsfilter1
+[gstreamer] gstreamer changed state from PAUSED to PLAYING ==> decoder
+[gstreamer] gstreamer changed state from PAUSED to PLAYING ==> capsfilter0
+[gstreamer] gstreamer changed state from PAUSED to PLAYING ==> v4l2src0
+[gstreamer] gstreamer message stream-start ==> pipeline0
+[32m18:06:36 | SUCCESS | VideoQuery - system ready[0m
+ * Serving Flask app 'nano_llm.web.server'
+ * Debug mode: on
+18:06:36 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:8050
+ * Running on https://10.166.153.27:8050
+18:06:36 | INFO | [33mPress CTRL+C to quit[0m
+[gstreamer] gstCamera -- onPreroll
+[0;33m[gstreamer] gstBufferManager -- map buffer size was less than max size (1382400 vs 1382407)
+[0m[gstreamer] gstBufferManager recieve caps:  video/x-raw, format=(string)I420, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)jpeg, colorimetry=(string)1:4:0:0, framerate=(fraction)30/1
+[gstreamer] gstBufferManager -- recieved first frame, codec=MJPEG format=i420 width=1280 height=720 size=1382407
+[cuda]   allocated 4 ring buffers (1382407 bytes each, 5529628 bytes total)
+[cuda]   allocated 4 ring buffers (8 bytes each, 32 bytes total)
+[gstreamer] gstreamer changed state from READY to PAUSED ==> mysink
+[gstreamer] gstreamer message async-done ==> pipeline0
+[gstreamer] gstreamer message latency ==> mysink
+[gstreamer] gstreamer changed state from PAUSED to PLAYING ==> mysink
+[gstreamer] gstreamer changed state from PAUSED to PLAYING ==> pipeline0
+[cuda]   allocated 4 ring buffers (2764800 bytes each, 11059200 bytes total)
+[OpenGL] glDisplay -- set the window size to 1280x720
+[OpenGL] creating 1280x720 texture (GL_RGB8 format, 2764800 bytes)
+[cuda]   registered openGL texture for interop access (1280x720, GL_RGB8, 2764800 bytes)
+[32m1[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m
+[0m[32m2[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m not[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m not[0m[32m stop[0m[32m.[0m[32m[0m
+[32m1[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m
+[0m[32m2[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m not[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m not[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:41 | INFO | refresh rate:  0.63 FPS (1586.5 ms)
+[32m1[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m
+[0m[32m2[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m not[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m not[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:43 | INFO | refresh rate:  0.59 FPS (1701.2 ms)
+[32m1[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m
+[0m[32m2[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m not[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m not[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:44 | INFO | refresh rate:  0.61 FPS (1649.6 ms)
+[32m1[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m
+[0m[32m2[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m not[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m not[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:46 | INFO | refresh rate:  0.66 FPS (1507.1 ms)
+[32m1[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m
+[0m[32m2[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m not[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m not[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:47 | INFO | refresh rate:  0.66 FPS (1525.7 ms)
+[32m1[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m
+[0m[32m2[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m not[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m not[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:49 | INFO | refresh rate:  0.64 FPS (1568.9 ms)
+[32m1[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m
+[0m[32m2[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m not[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m not[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:50 | INFO | refresh rate:  0.62 FPS (1610.6 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:51 | INFO | refresh rate:  1.21 FPS (826.3 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:52 | INFO | refresh rate:  1.07 FPS (931.9 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:53 | INFO | refresh rate:  1.03 FPS (966.7 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:54 | INFO | refresh rate:  1.08 FPS (930.1 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:55 | INFO | refresh rate:  1.06 FPS (946.4 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:56 | INFO | refresh rate:  1.06 FPS (941.7 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:57 | INFO | refresh rate:  0.98 FPS (1015.7 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:58 | INFO | refresh rate:  1.03 FPS (973.5 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:06:59 | INFO | refresh rate:  1.11 FPS (901.2 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:07:00 | INFO | refresh rate:  1.19 FPS (842.6 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:07:01 | INFO | refresh rate:  1.16 FPS (858.9 ms)
+[32m2[0m[32m)[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:07:01 | INFO | refresh rate:  1.06 FPS (942.5 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:07:02 | INFO | refresh rate:  1.08 FPS (922.1 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:07:03 | INFO | refresh rate:  1.10 FPS (911.9 ms)
+[32m2[0m[32m.[0m[32m If[0m[32m there[0m[32m is[0m[32m a[0m[32m sign[0m[32m indicating[0m[32m that[0m[32m the[0m[32m driver[0m[32m should[0m[32m stop[0m[32m,[0m[32m then[0m[32m they[0m[32m should[0m[32m stop[0m[32m.[0m[32m[0m
+18:07:04 | INFO | refresh rate:  1.04 FPS (960.5 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:05 | INFO | refresh rate:  1.22 FPS (819.7 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:06 | INFO | refresh rate:  1.26 FPS (793.3 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:07 | INFO | refresh rate:  1.27 FPS (790.1 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:07 | INFO | refresh rate:  1.23 FPS (810.8 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:08 | INFO | refresh rate:  1.21 FPS (825.9 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:09 | INFO | refresh rate:  1.24 FPS (807.6 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:10 | INFO | refresh rate:  1.18 FPS (845.5 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:11 | INFO | refresh rate:  1.39 FPS (719.6 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:11 | INFO | refresh rate:  1.29 FPS (776.9 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:12 | INFO | refresh rate:  1.24 FPS (807.8 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:13 | INFO | refresh rate:  1.20 FPS (830.1 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:14 | INFO | refresh rate:  1.27 FPS (788.3 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:15 | INFO | refresh rate:  1.20 FPS (834.4 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:16 | INFO | refresh rate:  1.23 FPS (811.8 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:16 | INFO | refresh rate:  1.19 FPS (840.3 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:17 | INFO | refresh rate:  1.22 FPS (820.9 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:18 | INFO | refresh rate:  1.13 FPS (882.5 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:19 | INFO | refresh rate:  1.24 FPS (806.2 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:20 | INFO | refresh rate:  1.15 FPS (870.7 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:21 | INFO | refresh rate:  1.11 FPS (899.8 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:22 | INFO | refresh rate:  1.11 FPS (903.4 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:22 | INFO | refresh rate:  1.30 FPS (769.5 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:23 | INFO | refresh rate:  1.20 FPS (834.3 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:24 | INFO | refresh rate:  1.27 FPS (784.4 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:25 | INFO | refresh rate:  1.14 FPS (873.7 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:26 | INFO | refresh rate:  1.22 FPS (819.4 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:26 | INFO | refresh rate:  1.22 FPS (820.8 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0m[32m stop[0m[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:27 | INFO | refresh rate:  1.14 FPS (878.0 ms)
+[32m1[0m[32m.[0m[32m Based[0m[32m on[0m[32m the[0m[32m sign[0m[32m,[0m[32m drivers[0m[32m should[0mTraceback (most recent call last):
+[32m stop[0m  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/NanoLLM/nano_llm/agents/video_query.py", line 357, in <module>
+    agent = VideoQuery(**vars(args)).run() 
+  File "/opt/NanoLLM/nano_llm/agent.py", line 58, in run
+    self.pipeline[0].join(timeout)
+  File "/usr/lib/python3.10/threading.py", line 1096, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.10/threading.py", line 1116, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt
+[32m at[0m[32m the[0m[32m stop[0m[32m sign[0m[32m.[0m[32m[0m
+18:07:28 | INFO | refresh rate:  1.11 FPS (901.3 ms)
+Exception ignored in: <module 'threading' from '/usr/lib/python3.10/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1567, in _shutdown
+    lock.acquire()
+KeyboardInterrupt: 
