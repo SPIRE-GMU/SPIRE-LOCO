@@ -94,7 +94,7 @@ source ~/.bashrc
 ```
 ## Test TurtleBot3 Movement
 ```
-ros2 launch turtlebot3_bring_up robot.launch.py
+ros2 launch turtlebot3_bringup robot.launch.py
 ros2 run turtlebot3_teleop teleop_keyboard
 ```
 # Multi-Robot System using FastDDS
