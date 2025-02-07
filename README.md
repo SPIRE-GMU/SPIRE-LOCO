@@ -5,6 +5,8 @@ Multi-robot systems (MRS) are used in a variety of real-world applications, such
 
 https://github.com/user-attachments/assets/e8baf236-a0aa-4b21-82a9-e863e9d824c7
 
+https://github.com/user-attachments/assets/19925b60-7dee-4737-ba67-0948f0baadc5
+
 # Hardware/Software Requirements
 * 2-3 TurtleBot3 Burger Robots (Raspberry Pi 3 Model B+ running Ubuntu 22.04 Server with ROS2 Humble Hawksbill)
 * TurtleBot3 Burger Robot (Jetson Development Kit running Ubuntu 22.04 (Jetpack 6.1) with ROS 2 Humble Hawksbill)
