@@ -4,7 +4,6 @@ Autonomous Robots, Visual Language Models, and Road Sign Tests
 Multi-robot systems (MRS) are used in a variety of real-world applications, such as transportation and manufacturing. The project will have a MRS consistsing of TurtleBots, with one being a leader to transmit commands to follower robots. The leader TurtleBot will have a Jetson AGX Orin Dev Kit (32GB) and a webcam. A visual language model (VLM) will be used to interpret the webcam feed and will influence the TurtleBots' movements. Lastly, penetration testing will be performed to attack the operating system (OS) of the TurtleBots, Robotic Operating System (ROS), and then progagate that attack to the VLM or vice versa.
 
 https://github.com/user-attachments/assets/e8baf236-a0aa-4b21-82a9-e863e9d824c7
-https://github.com/SPIRE-GMU/SPIRE-LOCO/blob/4e910465c9a40f5973deccb62a0dd7c1ba548bdc/VLM%20Experiment%20Output%20Files/stop_sign3_cut.mp4
 
 # Hardware/Software Requirements
 * 2-3 TurtleBot3 Burger Robots (Raspberry Pi 3 Model B+ running Ubuntu 22.04 Server with ROS2 Humble Hawksbill)
