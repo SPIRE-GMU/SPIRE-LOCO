@@ -131,7 +131,7 @@ The following SLAM is performed utilizing the slam toolbox.
 ## Running the Master Robot
 Open the FastDDS Server.
 ```
-fastdds discovery --server-id 0 -l 192.168.0.215
+fastdds discovery --server-id 0 -l {master_ip_address}
 ```
 ## Running the Listener Robot
 Install the slam toolbox.
