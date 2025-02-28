@@ -126,7 +126,9 @@ ros2 launch turtlebot3_bringup robot.launch.py
 ```
 # Partitioning the MRS
 Download [turtlebot3](https://github.com/ROBOTIS-GIT/turtlebot3) package from github and replace the preexisting turtlebot3 package with the new package.
+
 Go into robot.launch.py in the turtlebot3_bringup and change the default namespace.
+
 Change teleop_keyboard.py publisher to the new namespace.
 ```
 cd ~/turtlebot3_ws/
