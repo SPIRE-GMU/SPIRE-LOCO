@@ -5,6 +5,7 @@ from rclpy.node import Node
 
 from std_msgs.msg import String
 
+
 class StartShapeVLM(Node):
 
     def __init__(self):
@@ -15,7 +16,7 @@ class StartShapeVLM(Node):
         os.system("""
             jetson-containers run $(autotag dustynv/nano_llm) \
                 python3 -m nano_llm.agents.video_query --api=mlc \
-                    --model liuhaotian/llava-v1.5-7b \
+                    --model liuhaotian/llava-v1.5-13b \
                     --max-context-len 256 \
                     --max-new-tokens 64 \
                     --video-input /dev/video0 \

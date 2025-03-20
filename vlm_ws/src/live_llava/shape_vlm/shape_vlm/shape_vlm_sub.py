@@ -13,54 +13,40 @@ from geometry_msgs.msg import TwistStamped
 import pyautogui
 import time
 
-class VLMSub(Node):
+
+class ShapeVLMSub(Node):
 
     def __init__(self):
-        super().__init__('VLM_Sub')
-        # self.subscriptionAll = self.create_subscription(String, 'VLLM_Output', self.listener_callback, 10)
-        self.subscriptionStop = self.create_subscription(String, 'VLLM_Stop', self.set_stop, 10)
+        super().__init__('ShapeVLM_Sub')
+        # self.subscriptionAll = self.create_subscription(String, 'VLM_Output', self.listener_callback, 10)
+        self.subscriptionFormation = self.create_subscription(String, 'Formation', self.formation_placeholder, 10)
         self.path_status = ""
 
         # prevent unused variable warning
         # self.subscriptionAll
-        self.subscriptionStop
-
-        # For stopping the TurtleBot
-        # self.publisherVel = self.create_publisher(Twist, 'cmd_vel', 10)
-        # self.twists = Twist()
+        self.subscriptionFormation
 
     def listener_callback(self, msg):
         # Subscribes to all VLLM output
         self.get_logger().info('%s' % msg.data)
 
-    def set_stop(self, msg):
+    def formation_placeholder(self, msg):
         # Subscribes to path_status from subscriber
         self.get_logger().info('%s' % msg.data)
         self.path_status = msg.data
 
-        # Publishes velocity 0 to stop the TurtleBot
-        if self.path_status == "Stop":
-            # self.twists.linear.x = 0.0
-            pyautogui.press("s")
-        else:
-            #self.twists.linear.x = 0.01
-            pass
-        #self.publisherVel.publish(self.twists)
 
 def main(args=None):
     rclpy.init(args=args)
 
-    vlm_sub = VLMSub()
+    shape_vlm_sub = ShapeVLMSub()
 
-    rclpy.spin(vlm_sub)
-    
-    # Only needed if using cmd_vel
-    # vlm_sub.twists.linear.x = 0.0
-    
+    rclpy.spin(shape_vlm_sub)
+
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    vlm_sub.destroy_node()
+    shape_vlm_sub.destroy_node()
     rclpy.shutdown()
 
 
