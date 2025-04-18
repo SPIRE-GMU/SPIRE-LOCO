@@ -1,0 +1,150 @@
+jetson
+
+https://roboticsbackend.com/ros2-nav2-generate-a-map-with-slam_toolbox/
+https://automaticaddison.com/navigation-and-slam-using-the-ros-2-navigation-stack/
+https://roboticsbackend.com/ros2-nav2-tutorial/
+___________________________________________________________
+
+
+# lidar turtlebot - 192.168.0.100
+# ros2 run turtlebot3_teleop teleop_keyboard
+# slamtoolbox
+
+fastdds discovery --server-id 0 -l 192.168.0.215
+
+ssh pi@192.168.0.100
+ros2 launch turtlebot3_bringup robot.launch.py
+
+ssh pi@192.168.0.100
+ros2 launch nav2_bringup navigation_launcrh.py
+
+ssh pi@192.168.0.100
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/opt/ros/humble/share/slam_toolbox/config/mapper_params_online_async.yaml use_sim_time:=false
+
+ros2 launch slam_toolbox online_sync_launch.py slam_params_file:=/opt/ros/humble/share/slam_toolbox/config/mapper_params_online_sync.yaml use_sim_time:=false
+
+export ROS_DISCOVERY_SERVER=192.168.0.215
+ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz 
+
+location of config
+/opt/ros/humble/share/slam_toolbox/launch/online_async_launch.py
+
+# Try interactive mode and point cloud 
+https://husarion.com/tutorials/ros2-tutorials/8-slam/#localize-robot
+_______________________________________________________________________________________
+
+# cartagrapher
+# do global slam for pure localization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________________________________________________________-
+
+SROS
+https://github.com/ros2/sros2/blob/humble/SROS2_Linux.md
+https://docs.ros.org/en/humble/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html
+built from source then colcon build using command in sros2 github
+https://stackoverflow.com/questions/51778764/obnoxious-cryptographydeprecationwarning-because-of-missing-hmac-compare-time-fu
+Python cryptography error used pip install  to fix
+pip install pyOpenSSL==20.0.0
+pip install cryptography==3.4.7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+____________________________________
+
+
+   nine = math.pi
+        forward = 3
+        #Creates a Twist object with jetson /cmd_vel
+        twists = Twist()
+        if self.clock <= nine:
+            twists.linear.x = 0.0; twists.linear.y = 0.0; twists.linear.z = 0.0
+            twists.angular.x = 0.5; twists.angular.y = 0.5; twists.angular.z = 0.5
+            self.tb3_1.publish(twists)
+        if nine < self.clock < nine+forward:
+            twists.linear.x = 0.1; twists.linear.y = 0.0; twists.linear.z = 0.0
+            twists.angular.x = 0.0; twists.angular.y = 0.0; twists.angular.z = 0.0
+            self.tb3_1.publish(twists)
+        if  nine+forward < self.clock < nine+forward+1:
+            twists.linear.x = 0.0; twists.linear.y = 0.0; twists.linear.z = 0.0
+            twists.angular.x = 0.0; twists.angular.y = 0.0; twists.angular.z = 0.0
+            self.tb3_1.publish(twists)
+        if  nine+forward+1 < self.clock < nine+nine+forward+1:
+            twists.linear.x = 0.0; twists.linear.y = 0.0; twists.linear.z = 0.0
+            twists.angular.x = -0.68; twists.angular.y = -0.68; twists.angular.z = -0.68
+            self.tb3_1.publish(twists)
+        if nine+nine+forward+1 < self.clock < nine+nine+forward+2:
+            twists.linear.x = 0.1; twists.linear.y = 0.0; twists.linear.z = 0.0
+            twists.angular.x = 0.0; twists.angular.y = 0.0; twists.angular.z = 0.0
+            self.tb3_1.publish(twists)
+        if  self.clock > nine+nine+forward+2:
+            twists.linear.x = 0.0; twists.linear.y = 0.0; twists.linear.z = 0.0
+            twists.angular.x = 0.0; twists.angular.y = 0.0; twists.angular.z = 0.0
+            self.tb3_1.publish(twists)
+        self.clock+=1
+        print(self.clock)
+        #self.get_logger().info(f'L: {float(twists.linear.x)}, A: {float(twists.angular.z)}')
+        
+        
+        
+______________________________________________________
+
+Shape_ROS
+
+UBU
+
+fastdds discovery --server-id 0 -l 192.168.0.215
+
+cd ~/shape_ws
+ros2 run py_pubsub listener
+
+To edit script
+
+cd ~/shape_ws
+colcon  build --packages
+
+TURTLEBOTS
+
+ssh pi@192.168.0.15
+source ~/.bashrc
+ros2 launch turtlebot3_bringup robot.launch.py
+
+ssh pi@192.168.0.100
+ros2 launch turtlebot3_bringup robot.launch.py
+
+ssh pi@192.168.0.248
+ros2 launch turtlebot3_bringup robot.launch.py
+
+
+
+

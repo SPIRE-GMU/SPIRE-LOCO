@@ -1,0 +1,17 @@
+Run the jetson-containers command first
+jetson-containers run -v ~/NanoLLM:/workspace/NanoLLM  $(autotag nano_llm)
+
+(Can copy and paste the commands below together) (Also needs internet to update/install, but not for Agent Studio)
+apt update
+apt install -y gstreamer1.0-nice
+apt-get install -y avahi-utils libnss-mdns 
+service avahi-daemon stop
+python3 -m nano_llm.studio --load Llava7b-2
+
+Can replace the last line to load a different preset
+Other Presets:
+python3 -m nano_llm.studio --load Llava7b-2
+python3 -m nano_llm.studio --load Llava-13b (Will likely crash due to resource use)
+python3 -m nano_llm.studio --load Llava13b (Will likely crash due to resource use)
+
+There are 1-3 different colored robots that may be visible. What are the positions of the robots in relation to each other? What geometric pattern do the robots make?
