@@ -170,8 +170,8 @@ ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_vie
 ```
 
 # Vision Language Model (VLM) Setup
-## Done on Jetson AGX Orin Devkit
 ## Download Jetson Containers & Associated Models
+Done on Jetson AGX Orin Devkit (requires Jetpack 6)
 ```
 git clone https://github.com/dusty-nv/jetson-containers
 bash jetson-containers/install.sh
@@ -229,14 +229,14 @@ Now that you can refer to the MicroSD card as the label from the previous step, 
 LABEL=drive_name /mount/point           ext4    defaults        0       2
 '''
 
-## Run the vlm_ws as a ROS2 Node
+## Sign Recognition Experiment Setup with vlm_ws
 Navigate inside the vlm_ws directory to colcon build and source setup files.
 ```
 colcon build --packages-select live_llava
 source install/setup.bash
 ```
 
-Execute the VLM node first, followed by the Publisher and Subscriber nodes, each in their separate terminal.
+Execute the VLM start node first, followed by the Publisher and Subscriber nodes, each in their separate terminal.
 ```
 ros2 run live_llava vlm_start
 ros2 run live_llava vlm_pub
@@ -250,8 +250,33 @@ Notes on VLM ROS Nodes
   * Output is shown in terminal and sent to ~/output.txt
 * ros2 run py_pubsub live_llava_pub
   * Reads from output.txt and publishes "stop" or "clear" to the topic "path_status" when detecting certain keywords
+  * Keywords are in array called keywords (which are "sign" and "signs" by default)
 * ros2 run py_pubsub live_llava_sub
   * Receives information from "path_status"
   * Stops the TurtleBot when "path_status" is "stop"
   * Note this is done by simulating pressing the "s" key whenever the subscriber node receives stop
   * The simulated "s" key press is for the CURRENT WINDOW IN FOCUS, so the terminal running teleop needs to be in-focus
+ 
+## Robot Formation Recognition Experiment Setup with Agent Studio
+Run the jetson-containers command.
+'''
+jetson-containers run -v ~/NanoLLM:/workspace/NanoLLM  $(autotag nano_llm)
+'''
+
+Run the following commands while connected to the internet (commands can be copy and pasted all together).
+'''
+apt update
+apt install -y gstreamer1.0-nice
+apt-get install -y avahi-utils libnss-mdns 
+service avahi-daemon stop
+python3 -m nano_llm.studio
+'''
+
+Once Agent Studio is running, copy the following node layout with the following specifications:
+![Node Editor](https://github.com/user-attachments/assets/0fdd0bf1-1b7f-4645-bedc-6ca13a593852
+![llava-v1 5-7b](https://github.com/user-attachments/assets/fec5c28a-ed24-4706-95f5-b6cc40d0f6cd)
+![AutoPrompt](https://github.com/user-attachments/assets/4f1c13f7-7d01-4f89-96cf-616bae9bead7)
+![RateLimit](https://github.com/user-attachments/assets/4aa12e48-e865-4ae7-b579-638c5723dd9d)
+
+
+
