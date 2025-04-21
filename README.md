@@ -259,24 +259,27 @@ Notes on VLM ROS Nodes
  
 ## Robot Formation Recognition Experiment Setup with Agent Studio
 Run the jetson-containers command.
-'''
+```
 jetson-containers run -v ~/NanoLLM:/workspace/NanoLLM  $(autotag nano_llm)
-'''
+```
 
 Run the following commands while connected to the internet (commands can be copy and pasted all together).
-'''
+```
 apt update
 apt install -y gstreamer1.0-nice
 apt-get install -y avahi-utils libnss-mdns 
 service avahi-daemon stop
 python3 -m nano_llm.studio
-'''
+```
 
 Once Agent Studio is running, copy the following node layout with the following specifications:
-![Node Editor](https://github.com/user-attachments/assets/0fdd0bf1-1b7f-4645-bedc-6ca13a593852
+![Node Editor](https://github.com/user-attachments/assets/0fdd0bf1-1b7f-4645-bedc-6ca13a593852)
 ![llava-v1 5-7b](https://github.com/user-attachments/assets/fec5c28a-ed24-4706-95f5-b6cc40d0f6cd)
 ![AutoPrompt](https://github.com/user-attachments/assets/4f1c13f7-7d01-4f89-96cf-616bae9bead7)
 ![RateLimit](https://github.com/user-attachments/assets/4aa12e48-e865-4ae7-b579-638c5723dd9d)
 
-
+Once the Agent Studio nodes are setup, presets can be saved and loaded at the top-right corner of Agent Studio. The command to run Agent Studio can use the --load prefix to load your preset.
+```
+python3 -m nano_llm.studio --load preset_name
+```
 
