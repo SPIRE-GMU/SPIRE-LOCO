@@ -170,6 +170,7 @@ ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_vie
 ```
 
 # Vision Language Model (VLM) Setup
+## Done on Jetson AGX Orin Devkit
 ## Download Jetson Containers & Associated Models
 ```
 git clone https://github.com/dusty-nv/jetson-containers
@@ -182,7 +183,7 @@ jetson-containers run liuhaotian/llava-v1.5-7b
 
 ## Configuring Docker Daemon 
 The purpose is to store the VLM models inside the SD card.
-*  https://blog.adriel.co.nz/2018/01/25/change-docker-data-directory-in-debian-jessie/
+* https://blog.adriel.co.nz/2018/01/25/change-docker-data-directory-in-debian-jessie/
 * https://docs.docker.com/engine/daemon/
 
 Within the daemon.json config file
@@ -201,6 +202,10 @@ Within the daemon.json config file
 ```
 sudo systemctl restart docker 
 ```
+
+Note: This may cause a duplicate of your MicroSD card to appear within your files/file explorer that will keep changing names, follow this forurm thread to fix it.
+* https://askubuntu.com/questions/1451716/name-of-internal-hard-drive-keeps-changing
+
 ## Run the vlm_ws as a ROS2 Node
 Navigate inside the vlm_ws directory to colcon build and source setup files.
 ```
