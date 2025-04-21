@@ -203,8 +203,31 @@ Within the daemon.json config file
 sudo systemctl restart docker 
 ```
 
-Note: This may cause a duplicate of your MicroSD card to appear within your files/file explorer that will keep changing names, follow this forurm thread to fix it.
+## Assigning MicroSD Card a Mount POoint
+If setting the data-root for Docker to be your MicroSD card causes a duplicate of your MicroSD card to appear within your files/file explorer that will keep changing names, follow this forurm thread or following steps to fix it.
 * https://askubuntu.com/questions/1451716/name-of-internal-hard-drive-keeps-changing
+
+Use the fdisk command to see the device path of all hard disk partitions
+'''
+sudo fdisk -l
+'''
+
+Use the blkid command to show the current partition label and UUID of any disk partition with the device path.
+'''
+blkid file_path
+'''
+
+Add a label to the disk partition using the e2label or the tune2fs commands for ext2, ext3, and ext4 formatted partitions. Or use the ntfslabel for the ntfs format.
+'''
+sudo e2label file_path "drive_name"
+sudo tune2fs -L "drive_name" file_path
+sudo ntfslabel file_path drive_name
+'''
+
+Now that you can refer to the MicroSD card as the label from the previous step, add it to the /etc/fstab file.
+'''
+LABEL=drive_name /mount/point           ext4    defaults        0       2
+'''
 
 ## Run the vlm_ws as a ROS2 Node
 Navigate inside the vlm_ws directory to colcon build and source setup files.
